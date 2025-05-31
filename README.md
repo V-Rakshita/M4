@@ -133,20 +133,24 @@ Write a C Program to count the total number of words in a given string using do 
 int main() 
 {
     char str[15];
+    printf("Enter your string: ");
     scanf("%[^\n]s",&str);
-    int count=0,i;
-    for (i=0;str[i]!='\0';i++)
+    int count=0,i=0;
+    do
     {
         if (str[i] == ' ')
-            count++;           
+            count++;
+        i++;
     }
+    while (str[i]!='\0');
     printf("The total number of words are: %d",count+1);
 }
 ```
 
 ## OUTPUT
 
-![Screenshot_2-5-2025_85756_www programiz com](https://github.com/user-attachments/assets/780f8c35-ee77-4118-950c-62590c17165d)
+![image](https://github.com/user-attachments/assets/f9fa0b98-e78c-47df-a55d-4069411eeb1a)
+
 
 ## RESULT
 Thus the program to count the total number of words in a given string using do While loop has been executed successfully
@@ -184,11 +188,14 @@ int main()
     printf("Enter the first string:\n");
     scanf(" %[^\n]s",c1);
     printf("Enter the second string:\n");
-    scanf(" %s",c2);
+    scanf(" %[^\n]s",c2);
     for (i=0;c1[i]!='\0' || c2[i]!='\0';i++)
     {
         if (c1[i] != c2[i])
+        {
             flag = 1;
+            break;
+        }
     }
     if (flag == 0)
         printf("The strings are the same");
@@ -200,7 +207,8 @@ int main()
 
 ## OUTPUT
  
-![Screenshot_2-5-2025_92056_www programiz com](https://github.com/user-attachments/assets/efd3e9ca-7078-4612-9f7f-3df075713b0f)
+![image](https://github.com/user-attachments/assets/06c0a1f1-0237-4cb8-ab40-2efb7105067c)
+
 
 ## RESULT
 Thus the C Program to compare two strings without using strcmp() has been executed successfully.
